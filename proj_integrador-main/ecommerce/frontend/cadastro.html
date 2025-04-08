@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-menu">
+            <img src="/ecommerce/frontend/assets/logo.png" alt="Logo da Loja" class="logo">
+            <img src="/ecommerce/frontend/assets/menu-burger.png" alt="menu" class="menu_bar">
+        </div>
+        <div class="top-bar">
+            <div class="search-container">
+                <input type="text" placeholder="Como podemos ajudar?" class="search-bar">
+                <img src="/ecommerce/frontend/assets/search.png" alt="pesquisar" class="search-icon">
+            </div>
+            <div class="login-container">
+                <a href="/ecommerce/frontend/login.html" class="login">
+                    <img src="/ecommerce/frontend/assets/circle-user.png" alt="usuario" class="icone-usuario">
+                    Faça Login
+                </a>
+                <a href="/ecommerce/frontend/carrinho.html" class="carrinho">
+                    <img src="/ecommerce/frontend/assets/cart.png" alt="Carrinho" class="carrinho">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="detalhes">
+        <a href="/ecommerce/frontend/login.html" class="voltar" alt="voltar">
+            <img src="/ecommerce/frontend/assets/angle-left.png">
+        </a>
+        <h2>Cadastrar-se</h2>
+    </section>
+
+    <section class="cadastro-container">
+        <form id="cadastro-form">
+            <div class="form-group">
+                <label for="nome-completo">Nome Completo:</label>
+                <input type="text" id="nome-completo" name="nome-completo" required pattern="(\w+\s){1,}\w{3,}">
+                <small>Informe seu nome completo (mínimo 2 palavras com 3 letras cada).</small>
+            </div>
+
+            <div class="form-group">
+                <label for="data-nascimento">Data de Nascimento:</label>
+                <input type="date" id="data-nascimento" name="data-nascimento" required>
+            </div>
+
+            <div class="form-group">
+                <label for="genero">Gênero:</label>
+                <select id="genero" name="genero" required>
+                    <option value="">Selecione</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <small id="email-error" class="error-message"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required pattern="[0-9]{11}">
+                <small id="cpf-error" class="error-message"></small>
+            </div>
+
+            <div class="endereco-faturamento">
+                <h3>Endereço de Faturamento</h3>
+                <div class="form-group">
+                    <label for="cep-faturamento">CEP:</label>
+                    <input type="text" id="cep-faturamento" name="cep-faturamento" required pattern="[0-9]{5}-[0-9]{3}">
+                    <small id="cep-faturamento-error" class="error-message"></small>
+                </div>
+                <div class="form-group">
+                    <label for="logradouro-faturamento">Logradouro:</label>
+                    <input type="text" id="logradouro-faturamento" name="logradouro-faturamento" required>
+                </div>
+                <div class="form-group">
+                    <label for="numero-faturamento">Número:</label>
+                    <input type="text" id="numero-faturamento" name="numero-faturamento" required>
+                </div>
+                <div class="form-group">
+                    <label for="complemento-faturamento">Complemento:</label>
+                    <input type="text" id="complemento-faturamento" name="complemento-faturamento">
+                </div>
+                <div class="form-group">
+                    <label for="bairro-faturamento">Bairro:</label>
+                    <input type="text" id="bairro-faturamento" name="bairro-faturamento" required>
+                </div>
+                <div class="form-group">
+                    <label for="cidade-faturamento">Cidade:</label>
+                    <input type="text" id="cidade-faturamento" name="cidade-faturamento" required>
+                </div>
+                <div class="form-group">
+                    <label for="uf-faturamento">UF:</label>
+                    <select id="uf-faturamento" name="uf-faturamento" required>
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="endereco-entrega">
+                <h3>Endereço(s) de Entrega</h3>
+                <button type="button" id="adicionar-endereco-entrega">Adicionar Novo Endereço de Entrega</button>
+                <div id="enderecos-entrega-container">
+                    <div class="endereco-entrega-item">
+                        <label>Endereço de Entrega 1:</label>
+                        <button type="button" class="copiar-faturamento">Copiar do Faturamento</button>
+                        <div class="form-group">
+                            <label for="cep-entrega-1">CEP:</label>
+                            <input type="text" class="cep-entrega" id="cep-entrega-1" name="cep-entrega[]" required pattern="[0-9]{5}-[0-9]{3}">
+                            <small class="cep-entrega-error error-message"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="logradouro-entre
